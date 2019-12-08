@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Cian Porteous">
+    <meta name="description" content="Professional Resume for Cian Porteous">
+    <meta name="keywords" content="Resume, CV, Data, Coding, Software, Computers">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cian Porteous</title>
+	<link rel="stylesheet" type="text/css" href="css/mystyles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script>
+		function myFunction() {
+			document.getElementById("demo").innerHTML = "Paragraph changed.";
+		}
+	</script>
+</head>
+
+<body>	
+
+	<!---------------------------------- Navigation Bar -------------------------------------------->
+
+    <div class="mynav" id="topnav">
+		<div class="logo">
+			<a href ="index.html">
+				Cian Porteous
+			</a>
+		</div>
+		<div class="menu">
+			<ul>
+				<li>
+                    <a href="index.html">Home</a>
+				</li>
+				<li>
+                    <a href="https://github.com/CianPorteous">Projects</a>
+                </li>
+				<li>
+                    <a href="contact.html">Contact</a>
+				</li>
+				<li>
+
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!----------------------------------- Header ------------------------------------->
+
+	<header>
+		<div class="hero">
+			<br>
+			<br>
+			<br>
+			<h1>
+				Cian Porteous
+			</h1>
+			<br>
+			<br>
+			<p>
+				Welcome to my Website.
+			</p>
+			<br>
+			<br>
+			<br>
+			<p>
+				I am a developer based in Dublin with a passion for Data Science.
+			</p>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<a href="index.html#about" class="about-button">
+				About Me
+			</a>
+			<a href="contact.html" class="contact-button">
+				Contact
+			</a>
+		</div>
+	</header>
+
+
+	<!--------------------------------- About Me -------------------------------------->
+
+	<a class="anchor" id="about"></a>
+	<div class="about">
+		<h2>About Me</h2>
+			<div class="leftcolumn">
+				<img src="img/glasses.jpg" alt="Data Science Picture" class="glasses">
+			</div>
+			<div class="rightcolumn">
+				<br>
+				<br>
+				<br>
+				<h4>Cian Porteous</h4>
+				<br>
+				<br>
+				<p>Thank you for visiting my website. I am a junior developer from Dublin, Ireland.</p>
+				<br>
+				<br>
+				<p>I am currently enrolled in a Master's Programme in Computing in the Technological University of Dublin in Ireland.</p>
+				<br>
+				<br>
+				<p>My primary interests involve machine learning, neural networks, and data science. I also have some knowledge in web development and database administration.</p>
+				<br>
+				<br>
+				<p>I am working as an office administrator for the CBAI. My  current job roles include databse refinement and conversion of a paper archive into a digital archive.</p>
+				<br>
+				<br>
+				<br>
+			</div>
+	</div>
+
+
+	<!-------------------------------- Skills ----------------------------------------->
+
+	<div class="skills">
+		<h2>Skills</h2>
+		<br>
+		<br>
+		<br>
+		<div class="pythonskill">
+			<h3>Python</h3>
+			<p>Python developer of three years, using it primarily as a tool to explore machine learning and data science.</p>
+		</div>
+		<div class="sqlskill">
+			<h3>SQL</h3>
+			<p>I am knowledgable in database administration and management, as well as being proficient in SQL. </p>
+		</div>
+		<div class="javascriptskill">
+			<h3>Javascript</h3>
+			<p>I have an interest in node.js and angular javascript. I have some basic HTML and CSS knowledge.</p>
+		</div>
+		<br>
+		<br>
+		<br>
+	</div>
+
+	<!-------------------------------- Footer ----------------------------------------->
+
+	<footer>
+		<div class="footer">
+			<p>Cian Porteous 2019 &copy;</p>
+			<a href="https://github.com/CianPorteous" class="fa fa-github"></a>
+			<a href="https://www.twitter.com" class="fa fa-twitter"></a>
+			<a href="https://www.linkedin.com" class="fa fa-linkedin"></a>
+		</div>
+	</footer>
+
+
+<!---------------------------------- Scripts -------------------------------------------->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("a").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        window.location.hash = hash;
+      });
+    }
+  });
+});
+</script>
+</body>
+
+</html>

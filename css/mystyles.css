@@ -1,0 +1,260 @@
+body {
+    margin: 0;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Navigation  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.mynav {
+    background-color: #3b3a30;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    overflow: hidden;
+}
+
+.mynav:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.logo, .menu {
+    display: inline-block;
+    margin: 15px 0px 0px 0px;
+}
+
+.logo {
+    float: left;
+    margin: 25px;
+    font-weight: bold;
+    font-size: 110%;
+    color: grey;
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+.menu {
+    float: right;
+    margin: 10px;
+}
+
+.menu ul {
+    list-style: none;
+    padding-left: 20px;
+    margin: 0px;
+}
+
+.menu ul li {
+    display: inline-block;
+    margin: 15px;
+    color: lightskyblue;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    padding: 25px 20px 27px 20px;
+}
+
+.menu ul li a:hover {
+    color: white;
+    background-color: steelblue;
+    transition: all 0.4s ease;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Header  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+header {
+    background-image: url(../img/background.jpg);
+    height: 800 px;
+    background-size: cover;
+    color: white;
+}
+
+header p {
+    margin: 0;
+    color: white;
+    font-size: 140%;
+}
+
+header a {
+    font-size: 170%;
+    text-align: bottom;
+}
+
+.hero {
+    padding-top: 60px;
+    padding-bottom: 500px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 420%;
+}
+
+.paragraphhero {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 150%;
+    text-align: bottom;
+}
+
+.contact-button {
+    background-color: skyblue;
+    color: rgb(126, 5, 106);
+    display: inline-block;
+    padding: 20px 25px 20px 25px;
+    margin-left: 30px;
+    border-radius: 40px;
+    text-decoration: none;
+}
+
+.contact-button:hover {
+    background:white;
+    color: black;
+    transition: all 0.4s ease;
+}
+
+.about-button {
+    background-color: rgb(126, 5, 106);
+    color: rgb(139, 185, 206);
+    display: inline-block;
+    padding: 20px 25px 20px 25px;
+    margin-right: 30px;
+    border-radius: 40px;
+    text-decoration: none;
+}
+
+.about-button:hover {
+    background:black;
+    color: white;
+    transition: all 0.4s ease;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ About ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.about {
+    width: 100%;
+    background-color: white;
+    padding: 60px 0px 60px 0px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 150%;
+    background-color: lightgray;
+}
+
+
+about:after {
+    content: '';
+    clear: both;
+    display: block;
+
+}
+.about h2 {
+    text-align: center;
+    color: rgb(126, 19, 19);
+    position: relative;
+    font-size: 200%;
+}
+
+.about h4{
+    text-align: center;
+    font-size: 150%;
+}
+
+.about .leftcolumn, .about .rightcolumn {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.glasses {
+    max-width: 100%;
+    height: auto;
+  }
+
+.about .leftcolumn {
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+.about .leftcolumn img {
+    max-width: 100%;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+  }
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Skills ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.skills {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    font-size: 150%;
+    background-color:lightgray;
+}
+
+.skills:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.skills .pythonskill, .skills .sqlskill, .skills .javascriptskill {
+    width: 33.33%;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.skills .pythonskill {
+    float:left;
+}
+
+.skills .sqlskill {
+    float:right;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Footer ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+footer {
+    position: static;
+    width: 100%;
+    background-color: rgb(8, 0, 54);
+    color: white;
+    padding: 5px 0px 70px 0px;
+}
+
+footer p {
+    text-align: center
+}
+
+.fa {
+    padding: 20px;
+    font-size: 40px;
+    width: 30px;
+    text-align: right;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+
+.fa:hover {
+    opacity: 0.65;
+}

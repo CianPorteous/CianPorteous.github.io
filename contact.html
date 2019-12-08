@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Cian Porteous">
+    <meta name="description" content="Professional Resume for Cian Porteous">
+    <meta name="keywords" content="Resume, CV, Data, Coding, Software, Computers">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cian Porteous</title>
+    <link rel="stylesheet" type="text/css" href="css/mystyles.css">
+    	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+                /* Style inputs with type="text", select elements and textareas */
+        input[type=text], select, textarea {
+        width: 100%; /* Full width */
+        padding: 12px; /* Some padding */ 
+        border: 1px solid #ccc; /* Gray border */
+        border-radius: 4px; /* Rounded borders */
+        box-sizing: border-box; /* Make sure that padding and width stays in place */
+        margin-top: 6px; /* Add a top margin */
+        margin-bottom: 16px; /* Bottom margin */
+        resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+        }
+
+        /* Style the submit button with a specific background color etc */
+        input[type=submit] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        }
+
+        /* When moving the mouse over the submit button, add a darker green color */
+        input[type=submit]:hover {
+        background-color: #45a049;
+        }
+
+        /* Add a background color and some padding around the form */
+        .container {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+        }
+
+        input[type=reset] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border-left: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-left: 40px;
+        }
+
+        input[type=reset]:hover {
+        background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>	
+
+	<!--------------------------------- Navigation Bar ----------------------------------->
+
+    <div class="mynav" id="topnav">
+            <div class="logo">
+                <a href ="index.html">
+                    Cian Porteous
+                </a>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="resume.html">Resume</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/CianPorteous">Projects</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                    <li>
+    
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    <!-----------------------------Contact Form------------------------------------------->
+    <!---------------------------Adapted From W3 Schools---------------------------------->
+
+    <div class="container">
+            <form action="action_page.php">
+          
+              <label for="name">Name</label>
+              <input type="text" id="name" name="fullname" placeholder="Your name...">
+          
+              <label for="email">Email</label>
+              <input type="text" id="email" name="emailaddress" placeholder="Your email address...">
+          
+              <label for="phone">Phone Number</label>
+              <input type="text" id="phone" name="phonenumber" placeholder="Your phone number...">
+
+              <label for="country">Country</label>
+              <select id="country" name="country">
+                <option value="ireland">Ireland</option>
+                <option value="uk">UK</option>
+                <option value="usa">USA</option>
+                <option value="europe">Europe</option>
+                <option value="restofworld">Rest of World</option>
+              </select>
+          
+              <label for="subject">Subject</label>
+              <textarea id="subject" name="subject" placeholder="Send me a message..." style="height:200px"></textarea>
+          
+              <input type="submit" value="Submit">
+              <input type="reset" value="Reset">
+          
+            </form>
+          </div>
+
+
+        <!-----------------------------     Javascript   ------------------------------------------->
+        <!-------------  Taken from http://www.javascriptkit.com/script/cut13.shtml ---------------->
+
+
+          <script>
+
+                function GetCookie (name) {
+                var arg = name + "=";
+                var alen = arg.length;
+                var clen = document.cookie.length;
+                var i = 0;
+                while (i < clen) {
+                var j = i + alen;
+                if (document.cookie.substring(i, j) == arg)
+                return getCookieVal (j);
+                i = document.cookie.indexOf(" ", i) + 1;
+                if (i == 0) break;
+                }
+                return null;
+                }
+                function SetCookie (name, value) {
+                var argv = SetCookie.arguments;
+                var argc = SetCookie.arguments.length;
+                var expires = (argc > 2) ? argv[2] : null;
+                var path = (argc > 3) ? argv[3] : null;
+                var domain = (argc > 4) ? argv[4] : null;
+                var secure = (argc > 5) ? argv[5] : false;
+                document.cookie = name + "=" + escape (value) +
+                ((expires == null) ? "" : ("; expires=" + expires.toGMTString())) +
+                ((path == null) ? "" : ("; path=" + path)) +
+                ((domain == null) ? "" : ("; domain=" + domain)) +
+                ((secure == true) ? "; secure" : "");
+                }
+                function DeleteCookie (name) {
+                var exp = new Date();
+                exp.setTime (exp.getTime() - 1);
+                var cval = GetCookie (name);
+                document.cookie = name + "=" + cval + "; expires=" + exp.toGMTString();
+                }
+                var expDays = 30;
+                var exp = new Date();
+                exp.setTime(exp.getTime() + (expDays*24*60*60*1000));
+                function amt(){
+                var count = GetCookie('count')
+                if(count == null) {
+                SetCookie('count','1')
+                return 1
+                }
+                else {
+                var newcount = parseInt(count) + 1;
+                DeleteCookie('count')
+                SetCookie('count',newcount,exp)
+                return count
+                }
+                }
+                function getCookieVal(offset) {
+                var endstr = document.cookie.indexOf (";", offset);
+                if (endstr == -1)
+                endstr = document.cookie.length;
+                return unescape(document.cookie.substring(offset, endstr));
+                }
+                </script>
+                <script>document.write("You've visited this website <b>" + amt() + "</b> times.")</script>
+    <!------------------------------- Footer --------------------------------------------->
+
+	<footer>
+        <div class="footer">
+            <p>Cian Porteous 2019 &copy;</p>
+            <p>Royalty free music from https://www.fesliyanstudios.com</p>
+            <a href="https://github.com/CianPorteous" class="fa fa-github"></a>
+            <a href="https://www.twitter.com" class="fa fa-twitter"></a>
+            <a href="https://www.linkedin.com" class="fa fa-linkedin"></a>
+        </div>
+    </footer>
+</body>
+
+	
+<audio autoplay>
+    <source src="music/fesliyan.mp3" type="audio/mpeg">
+</audio>
+
+</html>
